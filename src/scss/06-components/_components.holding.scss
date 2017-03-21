@@ -21,7 +21,6 @@
     }
 
     @include mq($from: desktop) {
-      //width: 33%;
       max-width: inuit-rem(650px);
     }
   }
@@ -137,6 +136,11 @@
         @include mq($from: desktop) {
           height: inuit-rem(35px);
         }
+
+        &::placeholder {
+          font-family: $fontLight;
+          font-size: inuit-rem(12px);
+        }
       }
     }
 
@@ -154,6 +158,8 @@
         background-color: $brand-primary-4;
         border: inuit-rem(1px) solid $brand-primary-1;
         color: $brand-primary-1;
+        font-family: $fontTradeGothicBold;
+        font-size: inuit-rem(12px);
         height: inuit-rem(44px);
         letter-spacing: 1px;
         text-transform: uppercase;
