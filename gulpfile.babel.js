@@ -47,7 +47,7 @@ gulp.task('styles:css', () => {
   	return gulp.src('./src/scss/main.scss')
 	  	.pipe(plumber())
 	  	.pipe(autoprefixer({
-	        browsers: ['last 2 Chrome versions, last 2 Firefox versions, last 2 Safari versions, last 2 Edge versions, Explorer >= 10, iOS >= 8'],
+	        browsers: ['last 2 Chrome versions', 'last 2 Firefox versions', 'last 2 Safari versions', 'last 2 Edge versions', 'Explorer >= 10', 'iOS >= 8'],
 	    }))
 	    .pipe(sass().on('error', sass.logError))
 	    .pipe(cleanCss())
