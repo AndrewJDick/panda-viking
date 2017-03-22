@@ -4,7 +4,7 @@
 
   &__container {
     left: 50%;
-    margin: inuit-rem(80px) 0;
+    margin: inuit-rem(70px) 0;
     padding: 0 5%;
     position: absolute;
     top: 0;
@@ -21,7 +21,11 @@
     }
 
     @include mq($from: desktop) {
-      max-width: inuit-rem(650px);
+      width: 50%;
+    }
+
+    @include mq($from: wide) {
+      width: 33%;
     }
   }
     
@@ -36,30 +40,31 @@
 
   &__title {
     font-family: $fontHighlandpark;
-    font-size: inuit-rem(40px);
+    font-size: inuit-rem(28px);
     letter-spacing: 1px;
-    line-height: $heading-line-height;
-    margin: inuit-rem(80px) auto inuit-rem(40px);
+    margin: inuit-rem(60px) auto inuit-rem(10px);
     text-align: center;
     text-transform: uppercase;
 
     @include mq($from: tablet) {
       font-size: inuit-rem(32px);
+      line-height: $heading-line-height;
       margin: inuit-rem(40px) auto 0;
     }
   }
 
   &__links {
-    display: inline;
+    display: block;
     font-family: $fontTradeGothicBold;
-    font-size: inuit-rem(16px);
+    font-size: inuit-rem(12px);
     list-style-type: none;
     text-transform: uppercase;
+    text-align: center;
 
     a {
-      color: $black;
       border-bottom: 0;
-      padding-bottom: inuit-rem(1px);
+      color: $black;
+      display: block;
       text-decoration: none;
 
       &:active,
@@ -69,16 +74,34 @@
       }
     }
 
-    &:first-child::after {
-      content: "|";
-      font-size: inuit-rem(14px);
-      padding-left: inuit-rem(12px);
+    @include mq($from: mobileLandscape) {
+
+      display: inline;
+
+      a {
+        display: inline-block;
+      }
+      
+      &--right {
+        text-align: right;
+      }
+
+      &--left {
+        text-align: left;
+        padding-left: inuit-rem(12px);
+      }
+      
+      &:first-child::after {
+        content: "|";
+        font-size: inuit-rem(12px);
+        padding-left: inuit-rem(12px);
+      }
     }
   }
 
   &__form {
     background-color: $brand-primary-4;
-    margin-top: inuit-rem(55px);
+    margin-top: inuit-rem(50px);
     padding: inuit-rem(30px) 5%;
 
     &__title {
@@ -129,13 +152,9 @@
       }
       
       input {
-        height: inuit-rem(44px);
+        line-height: inuit-rem(32px);
         padding-left: inuit-rem(10px); 
         width: 100%; 
-
-        @include mq($from: desktop) {
-          height: inuit-rem(35px);
-        }
 
         &::placeholder {
           font-family: $fontLight;
@@ -160,14 +179,10 @@
         color: $brand-primary-1;
         font-family: $fontTradeGothicBold;
         font-size: inuit-rem(12px);
-        height: inuit-rem(44px);
         letter-spacing: 1px;
+        line-height: inuit-rem(32px);
         text-transform: uppercase;
         width: 100%;
-
-        @include mq($from: desktop) {
-          height: inuit-rem(35px);
-        }
       }
     }
 
