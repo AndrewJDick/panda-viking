@@ -5,7 +5,7 @@
   &__container {
     left: 50%;
     margin: inuit-rem(70px) 0;
-    padding: 0 5%;
+    padding: 0 inuit-rem(15px);
     position: absolute;
     top: 0;
     transform: translateX(-50%);
@@ -63,7 +63,7 @@
     text-align: center;
 
     a {
-      border-bottom: 0;
+      border-bottom: 1px solid rgba(0,0,0,0);
       color: $black;
       display: block;
       text-decoration: none;
@@ -110,7 +110,7 @@
   &__form {
     background-color: $brand-primary-4;
     margin-top: inuit-rem(50px);
-    padding: inuit-rem(30px) 5%;
+    padding: inuit-rem(20px) inuit-rem(10px);
 
     @include mq($from: tablet) {
       padding: inuit-rem(15px);
