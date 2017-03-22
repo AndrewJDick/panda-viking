@@ -24,7 +24,6 @@
       min-width: inuit-rem(500px);
       width: 33%;
     }
-
   }
     
   &__logo {
@@ -60,7 +59,7 @@
     text-align: center;
 
     a {
-      border-bottom: 1px solid rgba(0,0,0,0);
+      border-bottom: inuit-rem(1px) solid transparent;
       color: $black;
       display: block;
       text-decoration: none;
@@ -163,19 +162,14 @@
         border: 0;
         font-family: $fontLight;
         font-size: inuit-rem(12px);
-        line-height: inuit-rem(32px);
+        height: inuit-rem(25px);
+        line-height: inuit-rem(25px);
         padding: 0 0 0 inuit-rem(10px); 
         width: 100%; 
-
-        @include mq($from: desktop) {
-          height: inuit-rem(32px);
-          line-height: inuit-rem(32px);
-        }
       }
     }
 
     &__submit {
-
       padding-left: 0;
       width: 100%;
 
@@ -184,21 +178,28 @@
         margin-left: 2%;
       }
 
-      input {
+      button {
+        @extend %btn;
+
         background-color: $brand-primary-4;
         border: inuit-rem(1px) solid $brand-primary-1;
+        border-radius: 0;
         color: $brand-primary-1;
-        font-family: $fontTradeGothicBold;
-        font-size: inuit-rem(12px);
         letter-spacing: 1px;
-        line-height: inuit-rem(32px);
+        line-height: inuit-rem(23px);
         padding: 0;
-        text-transform: uppercase;
         width: 100%;
 
-        @include mq($from: desktop) {
-          height: inuit-rem(32px);
-          line-height: inuit-rem(32px);
+        &::before {
+          background-color: $brand-primary-1;     
+        }
+
+        &:hover {
+          color: $brand-primary-4;
+
+          &::before {
+            width: 120%;
+          }
         }
       }
     }

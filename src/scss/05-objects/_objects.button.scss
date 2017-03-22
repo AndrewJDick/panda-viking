@@ -1,0 +1,35 @@
+%btn,
+.btn {
+  cursor: pointer;
+  font-family: $fontTradeGothicBold;
+  font-size: inuit-rem(12px);
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  text-transform: uppercase;
+  transition: all 500ms ease;
+  z-index: 1;
+
+  &:before {
+    content: " ";
+    height: 100%;
+    left: -5%;
+    position: absolute;
+    top: 0;
+    transition: all 300ms ease;
+    width: 0%;
+    z-index: -1;
+  }
+
+  &:hover {
+    &:before {
+      width: 120%;
+    }
+  }
+
+  &.active {
+    &:before {
+      width: 120%;
+    }
+  }
+}
