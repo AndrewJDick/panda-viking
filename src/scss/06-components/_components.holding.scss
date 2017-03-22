@@ -74,6 +74,12 @@
       }
     }
 
+    @include mq($until: mobileLandscape) {
+      &:last-child {
+        margin-top: inuit-rem(12px);
+      }
+    }
+
     @include mq($from: mobileLandscape) {
 
       display: inline;
