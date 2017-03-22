@@ -77,6 +77,7 @@
     @include mq($from: mobileLandscape) {
 
       display: inline;
+      font-size: inuit-rem(14px);
 
       a {
         display: inline-block;
@@ -104,6 +105,10 @@
     margin-top: inuit-rem(50px);
     padding: inuit-rem(30px) 5%;
 
+    @include mq($from: tablet) {
+      padding: inuit-rem(15px);
+    }
+
     &__title {
       color: $brand-primary-1;
       display: block; 
@@ -111,14 +116,13 @@
       font-size: inuit-rem(18px);
       letter-spacing: $base-letter-spacing;
       line-height: $heading-line-height;
-      margin: 0 auto;
+      margin: 0 auto inuit-rem(10px);
       padding-left: 0;
       text-align: center;
       text-transform: uppercase;
       width: 100%;
 
       @include mq($from: mobileLandscape) {
-        font-size: inuit-rem(18px);
         width: 80%;
       }
     }
@@ -152,13 +156,16 @@
       }
       
       input {
+        border: 0;
+        font-family: $fontLight;
+        font-size: inuit-rem(12px);
         line-height: inuit-rem(32px);
-        padding-left: inuit-rem(10px); 
+        padding: 0 0 0 inuit-rem(10px); 
         width: 100%; 
 
-        &::placeholder {
-          font-family: $fontLight;
-          font-size: inuit-rem(12px);
+        @include mq($from: desktop) {
+          height: inuit-rem(32px);
+          line-height: inuit-rem(32px);
         }
       }
     }
@@ -181,13 +188,15 @@
         font-size: inuit-rem(12px);
         letter-spacing: 1px;
         line-height: inuit-rem(32px);
+        padding: 0;
         text-transform: uppercase;
         width: 100%;
-      }
-    }
 
-    @include mq($from: tablet) {
-      padding: inuit-rem(15px);
+        @include mq($from: desktop) {
+          height: inuit-rem(32px);
+          line-height: inuit-rem(32px);
+        }
+      }
     }
   }
 
