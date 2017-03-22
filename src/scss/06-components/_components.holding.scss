@@ -162,15 +162,14 @@
         border: 0;
         font-family: $fontLight;
         font-size: inuit-rem(12px);
-        height: inuit-rem(25px);
-        line-height: inuit-rem(25px);
+        height: inuit-rem(35px);
+        line-height: inuit-rem(35px);
         padding: 0 0 0 inuit-rem(10px); 
         width: 100%; 
       }
     }
 
     &__submit {
-      padding-left: 0;
       width: 100%;
 
       @include mq($from: desktop) {
@@ -186,7 +185,7 @@
         border-radius: 0;
         color: $brand-primary-1;
         letter-spacing: 1px;
-        line-height: inuit-rem(23px);
+        line-height: inuit-rem(33px);
         padding: 0;
         width: 100%;
 
