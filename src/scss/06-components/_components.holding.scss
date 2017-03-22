@@ -45,7 +45,7 @@
 
     @include mq($from: tablet) {
       font-size: inuit-rem(32px);
-      margin: inuit-rem(40px) auto inuit-rem(15px);
+      margin: inuit-rem(40px) auto 0;
     }
   }
 
