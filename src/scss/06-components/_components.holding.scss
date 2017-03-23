@@ -132,7 +132,6 @@
 
     &__input {
 
-      border-radius: 0;
       display: inline-block;
       margin-bottom: inuit-rem(16px);
       padding: 0;
@@ -161,6 +160,7 @@
       
       input {
         border: 0;
+        border-radius: 0;
         font-family: $fontLight;
         font-size: inuit-rem(12px);
         height: inuit-rem(35px);
