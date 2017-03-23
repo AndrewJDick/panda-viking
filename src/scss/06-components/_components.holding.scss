@@ -168,12 +168,6 @@
         padding: 0 0 0 inuit-rem(10px); 
         width: 100%; 
       }
-
-      &__error {
-        color: $brand-secondary-1; 
-        font-family: $fontBold;
-        font-size: inuit-rem(11px);
-      }
     }
 
     &__submit {
