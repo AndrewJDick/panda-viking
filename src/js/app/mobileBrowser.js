@@ -7,8 +7,8 @@ export default function mobileCheck() {
 
   var md = new MobileDetect(window.navigator.userAgent);
 
-  console.log( md.mobile() );
-  console.log( md.phone() );
-  console.log( md.tablet() ); 
+  window.alert( md.mobile() );
+  window.alert( md.phone() );
+  window.alert( md.tablet() ); 
 
 }
