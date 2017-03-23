@@ -10,20 +10,27 @@
   transition: all 500ms ease;
   z-index: 1;
 
-  &:before {
-    content: " ";
-    height: 100%;
-    left: -5%;
-    position: absolute;
-    top: 0;
-    transition: all 300ms ease;
-    width: 0%;
-    z-index: -1;
-  }
+  &--mouseOver {
 
-  &:hover {
     &:before {
-      width: 120%;
+      background-color: $brand-primary-1;
+      content: " ";
+      height: 100%;
+      left: -5%;
+      position: absolute;
+      top: 0;
+      transition: all 300ms ease;
+      width: 0%;
+      z-index: -1;
+    }
+
+    &:hover {
+      color: $brand-primary-4;
+
+      &:before {
+        color: $brand-primary-1;
+        width: 120%;
+      }
     }
   }
 }

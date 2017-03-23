@@ -1,8 +1,8 @@
 // App
 import VideoLoaded from './app/VideoLoaded';
-import mobileBrowser from './app/mobileBrowser';
+import AddDesktopClass from './app/AddDesktopClass';
 
-mobileBrowser();
 
 const holdingVideoLoaded = new VideoLoaded('holding-bgvid');
+const mouseOver = new AddDesktopClass('.button', 'btn--mouseOver');
 

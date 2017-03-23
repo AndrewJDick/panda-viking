@@ -82,9 +82,9 @@ gulp.task('scripts:main', () => {
     .pipe(browserify({
       insertGlobals : true 
     }))
-    .pipe(sourcemaps.init())
-    .pipe(sourcemaps.write())
-		//.pipe(uglify())
+    //.pipe(sourcemaps.init())
+    //.pipe(sourcemaps.write())
+		.pipe(uglify())
 		.pipe(gulp.dest('./dist/js'));
 });;
 
