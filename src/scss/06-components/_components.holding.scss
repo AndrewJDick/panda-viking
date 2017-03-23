@@ -1,6 +1,7 @@
 .c-holding {
 
   min-height: 100vh;
+  transition: all 300ms ease;
 
   &__container {
     left: 50%;
@@ -213,6 +214,7 @@
     position: fixed;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
+    transition: all 300ms ease;
     width: auto;
     z-index: -100;
 
